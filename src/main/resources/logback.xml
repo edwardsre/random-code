@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger{0} %X- %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="toFile" class="ch.qos.logback.core.FileAppender">
+    <append>false</append>
+    <file>random-code.log</file>
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger{0} %X- %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="DEBUG">
+    <appender-ref ref="stdout"/>
+    <appender-ref ref="toFile"/>
+  </root>
+
+</configuration>
